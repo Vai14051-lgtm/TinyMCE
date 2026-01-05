@@ -31,7 +31,7 @@ const CreateBlog = () => {
             <form onSubmit={(event) => {submit(event)}}>    
                 <input type="text" placeholder="Title" 
                     value={title}
-                    onChange={(e)=>{SetTitle(e.target.value)}} required />
+                    onChange={(e)=>{SetTitle(e.target.value)}}  />
 
                 <Editor
         apiKey="yzaxxwcuafhitmh9atqgod0kledn6xlii0y9f6o11h0in7d7"
@@ -41,19 +41,23 @@ const CreateBlog = () => {
   height: 500,
   menubar: true,
 
-  plugins: [
-    'advlist autolink lists link image charmap preview anchor',
-    'searchreplace visualblocks code fullscreen',
-    'insertdatetime media table paste code help wordcount'
-  ],
+ plugins: [
+  'advlist', 'autolink', 'lists', 'link', 'image',
+  'charmap', 'preview', 'anchor', 'searchreplace',
+  'visualblocks', 'code', 'fullscreen', 'insertdatetime',
+  'media', 'table', 'paste', 'help', 'wordcount'
+],
 
-  toolbar:
-    'undo redo | blocks fontfamily fontsize | ' +
-    'bold italic underline strikethrough forecolor backcolor | ' +
-    'alignleft aligncenter alignright alignjustify | ' +
-    'bullist numlist outdent indent | ' +
-    'link image media table | ' +
-    'removeformat preview fullscreen help',
+ 
+
+
+    toolbar:
+  'undo redo | blocks fontfamily fontsize | ' +
+  'bold italic underline strikethrough forecolor backcolor | ' +
+  'alignleft aligncenter alignright alignjustify | ' +
+  'bullist numlist outdent indent | ' +
+  'link image media table | ' +   // <-- ensure image + media are here
+  'removeformat preview fullscreen help',
 
   content_style:
     'body { font-family:Helvetica,Arial,sans-serif; font-size:14px }'
